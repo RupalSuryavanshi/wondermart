@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>WonderMart Add Products</title>
+
+        <style>
+           h1 {text-align: center; color: greenyellow; background-color: black}
+            form {text-align: center; background-color: rgb(135, 222, 166);}
+            button{background-color: rgb(135, 222, 166);}
+            
+        </style>
+    </head>
+    <body>
+        <h1 >WonderMart Products Adding Page</h1>
+        <form action="saveProduct" methods="POST">
+            <label for="name">Name : </label>
+            <input type="text" id="name" placeholder="Football Jerseys" name="name">
+            <br>
+            <br>
+            <label for="brand">Brand : </label>
+            <input type="text" id="brand" name="brand">
+            <br>
+            <br>
+            <label for="size">Size : </label>
+            <input type="text" id="size" name="size">
+            <br>
+            <br>
+            <label for="price">Price (Rs): </label>
+            <input type="number" id="price" name="price">
+            <br>
+            <br>
+            <label for="discount">Discount (Rs): </label>
+            <input type="number" id="discount" name="discount">
+            <br>
+            <br>
+            <label for="description">Description : </label>
+            <br>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <br>
+            <br>
+            <label for="category">Category : </label>
+            <input type="text" id="category" name="category">
+            <br>
+            <br>
+            <input type="submit" value="Add" name="add">
+        </form>
+        <br>
+        <button><a th:href="productList" >View All Products</a></button>
+    </body>
+</html>

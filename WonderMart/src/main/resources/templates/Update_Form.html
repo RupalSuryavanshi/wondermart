@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <title>WonderMart Update Products</title>
+
+    <style>
+            
+         h1 {text-align: center; color: greenyellow; background-color: black}
+         form {text-align: center; background-color: rgb(135, 222, 166);}
+         button{background-color: black; color: white;}
+    </style>
+</head>
+
+<body>
+        <h1 >WonderMart Products Updating Page</h1>
+        
+        <form th:action="saveUpdatedProduct" methods="POST">
+        
+        	<label for="id">Id : </label>
+        	<input type="text" id="id" name="id" th:value="${product.id}" readonly >
+        	<br>
+        	<br>
+            <label for="name">Name : </label>
+            <input type="text" id="name" placeholder="Enter Football Jersey" name="name" th:value="${product.name}">
+            <br>
+            <br>
+            <label for="brand">Brand : </label>
+            <input type="text" id="brand" name="brand" th:value="${product.brand}">
+            <br>
+            <br>
+            <label for="size">Size : </label>
+            <input type="text" id="size" name="size" th:value="${product.size}">
+            <br>
+            <br>
+            <label for="price">Price (Rs): </label>
+            <input type="number" id="price" name="price" th:value="${product.price}">
+            <br>
+            <br>
+            <label for="discount">Discount (Rs): </label>
+            <input type="number" id="discount" name="discount" th:value="${product.discount}">
+            <br>
+            <br>
+            <label for="description">Description : </label>
+            <br>
+            <textarea name="description"  th:value="${product.description}" id="description" cols="30" rows="10"></textarea>
+            <br>
+            <br>
+            <label for="category">Category : </label>
+            <input type="text" id="category" name="category" th:value="${product.category}">
+            <br>
+            <br>
+            
+            <input type="submit" value="Add" name="add">
+        </form>
+</body>
+</html>
+
+
+
